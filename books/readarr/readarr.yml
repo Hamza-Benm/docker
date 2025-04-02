@@ -8,9 +8,13 @@ services:
       - PGID=1000
       - TZ=Canada/Eastern
     volumes:
-      - "${CONFIG_VOLUME}:/config"
-   #   - "${BOOKS_VOLUME}:/books" #optional
-  #    - "${DOWNLOADS_VOLUME}:/downloads" #optional
+      - config:/config
+      - books:/books #optional
+      - downloads:/downloads #optional
     ports:
       - 8787:8787
     restart: unless-stopped
+volumes:
+  config:
+  books:
+  downloads:
