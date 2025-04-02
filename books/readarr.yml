@@ -3,7 +3,7 @@ version: "2.1"
 services:
   readarr:
     image: lscr.io/linuxserver/readarr:develop
-    container_name: readarr
+    container_name: $NAME
     environment:
       - PUID=1000
       - PGID=1000
