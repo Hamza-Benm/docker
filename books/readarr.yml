@@ -16,6 +16,6 @@ services:
       - 8787:8787
     restart: unless-stopped
 volumes:
-  $CONFIG_VOLUME:
+  ${CONFIG_VOLUME}:
  # $BOOKS_VOLUME:
-  $DOWNLOADS_VOLUME:
+  ${DOWNLOADS_VOLUME}:
