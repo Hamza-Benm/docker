@@ -10,7 +10,7 @@ services:
     volumes:
       - config:/config
       - books:/books #optional
-      - /mnt/hgfs/media_shared/books:/downloads #optional
+      - /mnt/hgfs/media_shared/:/downloads #optional
     ports:
       - 8787:8787
     restart: unless-stopped
