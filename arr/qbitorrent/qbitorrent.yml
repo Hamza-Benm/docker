@@ -11,7 +11,7 @@ services:
       - TORRENTING_PORT=6881
     volumes:
       - qbittorrent-config:/config
-      - /mnt/hgfs/media_shared/books:/downloads #optional
+      - /mnt/hgfs/media_shared:/downloads #optional
     ports:
       - 8090:8090
       - 6881:6881
