@@ -1,0 +1,12 @@
+# docker-compose.yml
+services:
+  convertx: 
+    image: ghcr.io/c4illin/convertx
+    container_name: $NAME
+    restart: unless-stopped
+    ports:
+      - "$PORT:3000"
+    environment:
+#      - JWT_SECRET=aLongAndSecretStringUsedToSignTheJSONWebToken1234 # will use randomUUID() if unset
+    volumes:
+      - /mnt/hgfs/convertx/data:/app/data
