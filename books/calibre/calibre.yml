@@ -1,0 +1,21 @@
+---
+services:
+  calibre:
+    image: lscr.io/linuxserver/calibre:latest
+    container_name: $NAME
+    security_opt:
+      - seccomp:unconfined #optional
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Eanada/Eastern
+      #- PASSWORD= #optional
+      #- CLI_ARGS= #optional
+    volumes:
+      - /mnt/hgfs/services/calibre/config:/config
+      - /mnt/hgfs/services/calibre/data:/data
+    ports:
+      - 8089:8080
+      - 8181:8181
+      - 8091:8081
+    restart: unless-stopped
