@@ -9,4 +9,4 @@ services:
 #    environment:
 #      - JWT_SECRET=aLongAndSecretStringUsedToSignTheJSONWebToken1234 # will use randomUUID() if unset
     volumes:
-      - /mnt/hgfs/convertx/data:/app/data
+      - /mnt/hgfs/services/convertx/data:/app/data
