@@ -52,7 +52,7 @@ services:
     ports:
       - "8010:8000"
     volumes:
-      - /mnt/hgfs/services/data:/data:/usr/src/paperless/data
+      - /mnt/hgfs/services/data:/usr/src/paperless/data
       - /mnt/hgfs/services/paperless-ng/media:/usr/src/paperless/media
       - /mnt/hgfs/services/paperless-ng/export:/usr/src/paperless/export
       - /mnt/hgfs/services/paperless-ng/consume:/usr/src/paperless/consume
