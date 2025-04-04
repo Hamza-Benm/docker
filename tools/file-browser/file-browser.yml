@@ -2,8 +2,9 @@ services:
   filebrowser:
     image: hurlenko/filebrowser
     user: "1000:1000"
+    container_name: $NAME
     ports:
-      - 8443:8080
+      - ${PORT}:8080
     volumes:
       - /mnt/hgfs/media_shared:/data
       - filebrowser-config:/config
