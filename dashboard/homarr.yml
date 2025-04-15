@@ -7,6 +7,6 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock # <--- add this line here!
       - /mnt/hgfs/services/homarr/appdata:/appdata
     environment:
-      - SECRET_ENCRYPTION_KEY="e2b413567349ac16cfe1cf99ab716accf1aa7bf70438401e871583ed4a8e8a54" # <--- can be generated with `openssl rand -hex 32`
+      - SECRET_ENCRYPTION_KEY=$SECRET_ENCRYPTION_KEY # <--- can be generated with `openssl rand -hex 32`
     ports:
       - '7575:7575'
