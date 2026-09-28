@@ -6,7 +6,7 @@ services:
     ports:
       - ${PORT}:8080
     volumes:
-      - ${PATH-DATA}:/data
+      - ${PATH_DATA}:/data
       - filebrowser-config:/config
     environment:
       - FB_BASEURL=/filebrowser
