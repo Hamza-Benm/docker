@@ -6,7 +6,7 @@ services:
     ports:
       - ${PORT}:8080
     volumes:
-      - /mnt/hgfs/media_shared:/data
+      - ${PATH-DATA}:/data
       - filebrowser-config:/config
     environment:
       - FB_BASEURL=/filebrowser
